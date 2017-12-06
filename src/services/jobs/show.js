@@ -9,7 +9,7 @@ export default async (req, res) => {
     let job = await Job.findById(req.params.id)
 
     if( job.desc_full ){
-        res.render('jobs/show',{
+        return res.render('jobs/show',{
             title: "Indexador de vagas - Detalhe",
             layout: 'app',
             user: req.user || undefined,
@@ -27,7 +27,7 @@ export default async (req, res) => {
     let updateResult = await Job.findOneAndUpdate(job._id, newJob)
     let updatedJob   = await Job.findById(job._id)
 
-    res.render('jobs/show',{
+    return res.render('jobs/show',{
         title: "Indexador de vagas - Detalhe",
         layout: 'app',
         user: req.user || undefined,
