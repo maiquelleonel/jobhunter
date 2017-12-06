@@ -7,8 +7,8 @@ $(document).ready(function(){
         var chart = new Chart(context,{
             type:'line',
             data: {
-                datasets: result.datasets,
                 labels: result.labels
+                datasets: result.datasets,
             },
             options: {}
         });
@@ -16,7 +16,6 @@ $(document).ready(function(){
 
     $.get('http://localhost:5000/dash/by-15-days')
     .done(function(result) {
-
         var chart = new Chart(contextBy15Days, {
             type: 'pie',
             data: {

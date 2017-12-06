@@ -29,7 +29,7 @@ export default (req, res) => {
                 labels,
                 datasets: [{
                     data: data,
-                    backgroundColor: data.map(function(){
+                    backgroudColor: data.map(function(){
                         return 'rgba('
                             + Math.floor( Math.random() * 255) +', '
                             + Math.floor( Math.random() * 255) +', '
